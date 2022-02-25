@@ -1,0 +1,40 @@
+{
+	"@context": [
+		{
+			"schema": "http://schema.org/",
+			"skos": "https://www.w3.org/TR/skos-reference/",
+			"hyf": "https://www.opengis.net/def/schema/hy_features/hyf/",
+			"name": "schema:name",
+			"sameAs": "schema:sameAs",
+			"related": "skos:related",
+			"description": "schema:description",
+			"image": {
+				"@id": "schema:image",
+				"@type": "@id"
+			}
+		}
+	],
+	"@id": "{{ data.properties.uri }}",
+	"@type": [
+		"https://www.opengis.net/def/schema/hy_features/hyf/HY_HydrometricFeature",
+		"https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroLocation"
+	],
+    "name": "{{ data.properties.name }}",
+	"description": "{{ data.properties.description }}",
+	"hyf:referencedPosition": [
+		{
+			"hyf:HY_IndirectPosition": {
+				"hyf:distanceExpression": {
+					"hyf:HY_DistanceFromReferent": {
+						"hyf:interpolative": "{{ data.properties.Measure }}"
+					}
+				},
+				"hyf:distanceDescription": {
+					"hyf:HY_DistanceDescription": "upstream"
+				},
+				"hyf:linearElement": "https://geoconnex.us/nhdplusv2/reachcode/{{ data.properties.ReachCode }}"
+			}
+		}
+	],
+	"hyf:HY_HydroLocationType": "dam"
+}
