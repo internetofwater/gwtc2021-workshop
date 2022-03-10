@@ -109,7 +109,7 @@ resources:
               name: OGR
               data:
                  source_type: ESRIJSON
-                 source: https://services5.arcgis.com/9b85MAhVnAUWydgW/ArcGIS/rest/services/data/FeatureServer/0/query?where=1+%3D+1&outfields=*&orderByFields=SourceID+ASC&f=json
+                 source: https://services5.arcgis.com/9b85MAhVnAUWydgW/ArcGIS/rest/services/data/FeatureServer/0/query?where=1+%3D+1&outfields=*&orderByFields=SourceID+ASC&outSR=4326&f=json
                  source_srs: EPSG:4326
                  target_srs: EPSG:4326
                  source_capabilities:
