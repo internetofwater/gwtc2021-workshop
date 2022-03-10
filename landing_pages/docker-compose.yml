@@ -8,8 +8,8 @@ services:
     ports:
       - "5002:80"
     restart: always
-    volumes:
+#    volumes:
       # No server.templates.path defined in pygeoapi config. Mount into default templates
       # - ./jsonld:/pygeoapi/pygeoapi/templates/jsonld:ro
       # server.templates.path defined in pygeoapi config. Mount as a child folder to templates path
-      - ./jsonld:/skin-dashboard/templates/jsonld:ro
+     # - ./jsonld:/skin-dashboard/templates/jsonld:ro

@@ -21,6 +21,9 @@ d <- dplyr::filter(d,!is.na(SourceID) & d$SourceID!="NA")
 write_sf(d,"landing_pages/data/data.gpkg")
 rm(d2)
 library(mapview)
+
+data <- sf::read_sf("data/6c78140c-b4f0-4283-ae18-651aa1f94fc6.gdb")
+data$uri<-paste0("https://geoconnex.us/iow/gwtc2021-demo/",data$SourceID)
 ```
 ```{css, echo=FALSE}
 pre {
