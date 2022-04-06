@@ -55,8 +55,8 @@ logging:
 
 metadata:
     identification:
-        title: geoconnex reference features
-        description: Provides reference features for geoconnex.us.
+        title: Demo landing pages for geoconnex.us
+        description: Provides demonstration landing pages and embedded JSON-LD for individual features with hydrologic addresses. An example for participation in the geoconnex.us system.
         keywords:
             - geospatial
             - data
