@@ -24,6 +24,7 @@ library(mapview)
 
 data <- sf::read_sf("data/6c78140c-b4f0-4283-ae18-651aa1f94fc6.gdb")
 data$uri<-paste0("https://geoconnex.us/iow/gwtc2021-demo/",data$SourceID)
+readr::write_csv(data,"data/data.geojson")
 ```
 ```{css, echo=FALSE}
 pre {
@@ -71,7 +72,7 @@ mapview(select(d,SourceID,uri,ReachCode,Measure),zcol=c("Measure"))
 
 ## Choose or format JSON-LD
 
-In this dataset, we are dealing with a dam, which is being represented as a point location on a hydrologic network. A template for this kind of feature is available here: https://github.com/internetofwater/docs.geoconnex.us/wiki/hydrologic-location-template 
+In this dataset, we are dealing with a monitoring location which is being represented as a point location on a hydrologic network. A template for this kind of feature is available here: https://github.com/internetofwater/docs.geoconnex.us/wiki/hydrologic-location-template 
 
 ```{json, echo=TRUE, class_output="scroll-100"}
 {
@@ -115,7 +116,7 @@ In this dataset, we are dealing with a dam, which is being represented as a poin
 			}
 		}
 	],
-	"hyf:HY_HydroLocationType": "dam",
+	"hyf:HY_HydroLocationType": "hydrometricStation",
 	"geo": {
 		"@type": "schema:GeoCoordinates",
       "schema:latitude": "{{latitude}}",

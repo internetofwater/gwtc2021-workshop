@@ -14,25 +14,25 @@
 			}
 		}
 	],
-	"@id": "{{ data.properties.uri }}",
+	"@id": "{{ data["@id"] }}",
 	"@type": [
 		"https://www.opengis.net/def/schema/hy_features/hyf/HY_HydrometricFeature",
 		"https://www.opengis.net/def/schema/hy_features/hyf/HY_HydroLocation"
 	],
-    "name": "{{ data.properties.name }}",
-	"description": "{{ data.properties.description }}",
+    "name": "{{ data.GNIS_NAME }}",
+	"description": "Monitoring Location at {{ data.GNIS_NAME }}",
 	"hyf:referencedPosition": [
 		{
 			"hyf:HY_IndirectPosition": {
 				"hyf:distanceExpression": {
 					"hyf:HY_DistanceFromReferent": {
-						"hyf:interpolative": "{{ data.properties.Measure }}"
+						"hyf:interpolative": "{{ data.NHDPv2Measure }}"
 					}
 				},
 				"hyf:distanceDescription": {
 					"hyf:HY_DistanceDescription": "upstream"
 				},
-				"hyf:linearElement": "https://geoconnex.us/nhdplusv2/reachcode/{{ data.properties.ReachCode }}"
+				"hyf:linearElement": "https://geoconnex.us/nhdplusv2/reachcode/{{ data.NHDPv2ReachCode }}"
 			}
 		}
 	],

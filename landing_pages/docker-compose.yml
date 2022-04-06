@@ -2,14 +2,15 @@
 version: '3'
 
 services:
-  info-geoconnex-us:
+  landing-pages:
     build: .
+  # image: internetofwater/pygeoapi:stable
     user: root
     ports:
-      - "5002:80"
+      - "5000:80"
     restart: always
 #    volumes:
-      # No server.templates.path defined in pygeoapi config. Mount into default templates
-      # - ./jsonld:/pygeoapi/pygeoapi/templates/jsonld:ro
-      # server.templates.path defined in pygeoapi config. Mount as a child folder to templates path
-     # - ./jsonld:/skin-dashboard/templates/jsonld:ro
+#       - ./data:/data
+#       - ./pygeoapi.config.yml:/pygeoapi/local.config.yml
+#       - ./jsonld:/pygeoapi/pygeoapi/templates/jsonld:ro
+
