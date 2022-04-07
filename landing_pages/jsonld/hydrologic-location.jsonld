@@ -36,5 +36,7 @@
 			}
 		}
 	],
-	"hyf:HY_HydroLocationType": "dam"
+	"hyf:HY_HydroLocationType": "hydrometricStation",
+    "geo": {{ data['schema:geo'] | to_json | safe }},
+    "gsp:hasGeometry": {{ data['gsp:hasGeometry'] | to_json }}
 }
