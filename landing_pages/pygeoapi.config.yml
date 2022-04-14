@@ -121,7 +121,7 @@ resources:
             - type: application/html
               rel: canonical
               title: data source
-              href: https://services5.arcgis.com/9b85MAhVnAUWydgW/ArcGIS/rest/services/data/FeatureServer/0
+              href: https://services5.arcgis.com/9b85MAhVnAUWydgW/ArcGIS/rest/services/gwtc_2022_demo_data_(Feature_Service)/FeatureServer/0
               hreflang: en-US
         extents:
             spatial:
@@ -133,6 +133,6 @@ resources:
         providers:
             - type: feature
               name: ESRI
-              data: https://services5.arcgis.com/9b85MAhVnAUWydgW/ArcGIS/rest/services/data/FeatureServer/0
+              data: https://services5.arcgis.com/9b85MAhVnAUWydgW/ArcGIS/rest/services/gwtc_2022_demo_data_(Feature_Service)/FeatureServer/0
               id_field: SourceID
               uri_field: uri
