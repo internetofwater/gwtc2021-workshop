@@ -5,6 +5,7 @@
 			"skos": "https://www.w3.org/TR/skos-reference/",
 			"hyf": "https://www.opengis.net/def/schema/hy_features/hyf/",
 			"name": "schema:name",
+			"gsp": "http://www.opengeospatial.org/standards/geosparql/",
 			"sameAs": "schema:sameAs",
 			"related": "skos:related",
 			"description": "schema:description",
