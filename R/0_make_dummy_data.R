@@ -35,7 +35,7 @@ url_end <- "&addProps=yearsModified,conditionAssessId,conditionAssessDate,submit
 
 #write_csv(c,"../data/nid.csv")
 
-nid <- readr::read_csv("../data/nid.csv")
+nid <- readr::read_csv("data/nid.csv")
 nid_ids <- 
 
 nid_addressed <- nid_addressed %>% separate_rows(Type_NID, sep=" ")
