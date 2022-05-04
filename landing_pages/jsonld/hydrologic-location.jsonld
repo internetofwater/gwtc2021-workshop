@@ -39,7 +39,7 @@
 	],
 	"hyf:HY_HydroLocationType": "hydrometricStation",
 	"schema:geoWithin": {{ data.states }},
-	"schema:geoWithin": {{ data.huc8 }}
+	"schema:geoWithin": {{ data.huc8 }},
     "geo": {{ data['schema:geo'] | to_json | safe }},
     "gsp:hasGeometry": {{ data['gsp:hasGeometry'] | to_json }}
 }
